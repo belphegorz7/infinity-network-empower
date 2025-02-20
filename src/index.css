@@ -39,3 +39,14 @@
     @apply bg-white/50 backdrop-blur-sm;
   }
 }
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

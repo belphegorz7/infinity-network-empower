@@ -2,7 +2,7 @@
 import { Code, Network, Cloud, Lock } from "lucide-react";
 
 const ServiceCard = ({ icon: Icon, title, description }: { icon: any; title: string; description: string }) => (
-  <div className="p-6 bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-up group">
+  <div className="p-6 bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 group">
     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
       <Icon className="h-6 w-6 text-primary" />
     </div>
@@ -47,7 +47,7 @@ const Services = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <ServiceCard
               key={service.title}
               {...service}
