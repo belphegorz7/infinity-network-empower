@@ -4,7 +4,7 @@ const About = () => {
     <section id="sobre" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="animate-fade-up">
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
               Sobre a Infinity Network
             </h2>
@@ -28,12 +28,12 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="mt-10 lg:mt-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <div className="mt-10 lg:mt-0">
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
               <img
                 src="/placeholder.svg"
                 alt="Equipe Infinity Network"
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
