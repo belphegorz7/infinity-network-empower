@@ -20,6 +20,9 @@ const Navbar = () => {
               <a href="#servicos" className="text-gray-700 hover:text-primary transition-colors">
                 Serviços
               </a>
+              <a href="#portfolio" className="text-gray-700 hover:text-primary transition-colors">
+                Portfólio
+              </a>
               <a href="#sobre" className="text-gray-700 hover:text-primary transition-colors">
                 Sobre
               </a>
@@ -54,6 +57,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Serviços
+            </a>
+            <a
+              href="#portfolio"
+              className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Portfólio
             </a>
             <a
               href="#sobre"

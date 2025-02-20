@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Send } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -84,6 +84,30 @@ const Contact = () => {
                 <h3 className="text-lg font-medium text-gray-900">Email</h3>
                 <p className="mt-1 text-gray-600">contato@infinitynetwork.com</p>
               </div>
+            </div>
+            <div className="flex justify-center space-x-6 pt-6">
+              <a
+                href="https://instagram.com/infinitynetwork"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Instagram className="h-8 w-8" />
+              </a>
+              <a
+                href="mailto:contato@infinitynetwork.com"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Mail className="h-8 w-8" />
+              </a>
+              <a
+                href="https://wa.me/5511912345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Send className="h-8 w-8" />
+              </a>
             </div>
           </div>
         </div>
