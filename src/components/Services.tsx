@@ -2,8 +2,8 @@
 import { Code, Network, Cloud, Lock } from "lucide-react";
 
 const ServiceCard = ({ icon: Icon, title, description }: { icon: any; title: string; description: string }) => (
-  <div className="p-6 bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-up">
-    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+  <div className="p-6 bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-up group">
+    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
       <Icon className="h-6 w-6 text-primary" />
     </div>
     <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
@@ -36,7 +36,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-gray-50">
+    <section id="servicos" className="py-20 bg-gray-50 code-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-dark">
@@ -51,7 +51,6 @@ const Services = () => {
             <ServiceCard
               key={service.title}
               {...service}
-              style={{ animationDelay: `${index * 0.1}s` }}
             />
           ))}
         </div>
