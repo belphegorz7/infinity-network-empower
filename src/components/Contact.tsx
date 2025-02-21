@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Instagram, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Github, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -7,12 +7,23 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    socialEmail: "",
+    github: "",
+    instagram: "",
+    whatsapp: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Aqui você pode adicionar a lógica de envio do formulário
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   return (
@@ -36,6 +47,9 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
                   placeholder="Seu nome completo"
@@ -48,6 +62,9 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
                   placeholder="seu@email.com"
@@ -59,6 +76,9 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
                   required
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
@@ -119,29 +139,51 @@ const Contact = () => {
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <h3 className="text-lg font-medium text-gray-900 mb-6">Redes Sociais</h3>
-              <div className="flex justify-center space-x-8">
-                <a
-                  href="https://instagram.com/infinitynetwork"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors p-2"
-                >
-                  <Instagram className="h-8 w-8" />
-                </a>
-                <a
-                  href="mailto:contato@infinitynetwork.com"
-                  className="text-gray-600 hover:text-primary transition-colors p-2"
-                >
-                  <Mail className="h-8 w-8" />
-                </a>
-                <a
-                  href="https://wa.me/5511912345678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary transition-colors p-2"
-                >
-                  <Send className="h-8 w-8" />
-                </a>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Github className="h-6 w-6 text-gray-600" />
+                  <input
+                    type="text"
+                    name="github"
+                    value={formData.github}
+                    onChange={handleChange}
+                    placeholder="Seu perfil do GitHub"
+                    className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  />
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Instagram className="h-6 w-6 text-gray-600" />
+                  <input
+                    type="text"
+                    name="instagram"
+                    value={formData.instagram}
+                    onChange={handleChange}
+                    placeholder="Seu perfil do Instagram"
+                    className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  />
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Send className="h-6 w-6 text-gray-600" />
+                  <input
+                    type="text"
+                    name="whatsapp"
+                    value={formData.whatsapp}
+                    onChange={handleChange}
+                    placeholder="Seu número do WhatsApp"
+                    className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  />
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Mail className="h-6 w-6 text-gray-600" />
+                  <input
+                    type="email"
+                    name="socialEmail"
+                    value={formData.socialEmail}
+                    onChange={handleChange}
+                    placeholder="Email alternativo para contato"
+                    className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  />
+                </div>
               </div>
             </div>
           </div>
