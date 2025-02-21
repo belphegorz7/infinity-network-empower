@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="contato" className="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4">
@@ -38,7 +38,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div className="bg-white p-8 rounded-lg shadow-lg animate-fade-up">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -87,14 +87,15 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-4 px-6 rounded-md hover:bg-primary-dark transition-colors duration-300 font-medium"
+                className="w-full bg-primary text-white py-4 px-6 rounded-md hover:bg-primary-dark transition-colors duration-300 font-medium flex items-center justify-center gap-2"
               >
+                <Send className="w-5 h-5" />
                 Enviar Mensagem
               </button>
             </form>
           </div>
           <div className="space-y-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
               <div className="space-y-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
@@ -137,7 +138,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-lg font-medium text-gray-900 mb-6">Redes Sociais</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
