@@ -51,8 +51,8 @@ const Services = () => {
           <div className="rounded-lg overflow-hidden shadow-xl">
             <AspectRatio ratio={16/9}>
               <img
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
-                alt="Datacenter moderno"
+                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+                alt="Desenvolvimento de software"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </AspectRatio>
@@ -60,8 +60,8 @@ const Services = () => {
           <div className="rounded-lg overflow-hidden shadow-xl">
             <AspectRatio ratio={16/9}>
               <img
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80"
-                alt="Desenvolvimento de software"
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+                alt="Setup moderno"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </AspectRatio>

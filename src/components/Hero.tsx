@@ -47,8 +47,8 @@ const Hero = () => {
           <div className="rounded-lg overflow-hidden shadow-xl">
             <AspectRatio ratio={16/9}>
               <img
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80"
-                alt="Setup de desenvolvimento"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                alt="Ambiente de desenvolvimento"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </AspectRatio>

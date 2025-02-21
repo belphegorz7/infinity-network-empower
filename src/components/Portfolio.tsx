@@ -64,7 +64,7 @@ const Portfolio = () => {
           <div className="rounded-lg overflow-hidden shadow-xl">
             <AspectRatio ratio={16/9}>
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
                 alt="Desenvolvimento em equipe"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -73,7 +73,7 @@ const Portfolio = () => {
           <div className="rounded-lg overflow-hidden shadow-xl">
             <AspectRatio ratio={16/9}>
               <img
-                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
                 alt="Setup moderno"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
