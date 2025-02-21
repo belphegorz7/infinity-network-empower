@@ -1,5 +1,6 @@
 
 import { FileCode2, Server, Globe, Database } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const PortfolioCard = ({ title, description, icon: Icon, tech }: { title: string; description: string; icon: any; tech: string[] }) => (
   <div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group">
@@ -58,6 +59,26 @@ const Portfolio = () => {
           <p className="mt-4 text-lg text-gray-600">
             Conheça alguns dos nossos projetos de sucesso
           </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <AspectRatio ratio={16/9}>
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                alt="Desenvolvimento em equipe"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </AspectRatio>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <AspectRatio ratio={16/9}>
+              <img
+                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80"
+                alt="Setup moderno"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </AspectRatio>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project) => (

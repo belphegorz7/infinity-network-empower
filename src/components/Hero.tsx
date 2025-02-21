@@ -1,5 +1,6 @@
 
 import { ArrowRight, Code, Terminal, Database } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Hero = () => {
   return (
@@ -18,28 +19,39 @@ const Hero = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center">
-          <div className="flex justify-center space-x-4 mb-8">
-            <Code className="w-8 h-8 text-primary" />
-            <Terminal className="w-8 h-8 text-primary" />
-            <Database className="w-8 h-8 text-primary" />
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-left">
+            <div className="flex space-x-4 mb-8">
+              <Code className="w-8 h-8 text-primary" />
+              <Terminal className="w-8 h-8 text-primary" />
+              <Database className="w-8 h-8 text-primary" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-primary-dark">
+              Transformando ideias em
+              <span className="text-primary"> realidade digital</span>
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-gray-600">
+              Há 5 anos entregando soluções em desenvolvimento de software e manutenção de redes
+              com excelência e o melhor custo-benefício do mercado.
+            </p>
+            <div className="mt-10">
+              <a
+                href="#contato"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
+              >
+                Fale Conosco
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-dark">
-            Transformando ideias em
-            <span className="text-primary"> realidade digital</span>
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Há 5 anos entregando soluções em desenvolvimento de software e manutenção de redes
-            com excelência e o melhor custo-benefício do mercado.
-          </p>
-          <div className="mt-10">
-            <a
-              href="#contato"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
-            >
-              Fale Conosco
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <AspectRatio ratio={16/9}>
+              <img
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80"
+                alt="Setup de desenvolvimento"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </AspectRatio>
           </div>
         </div>
       </div>

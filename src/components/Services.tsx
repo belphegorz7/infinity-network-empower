@@ -1,5 +1,6 @@
 
 import { Code, Network, Cloud, Lock } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ServiceCard = ({ icon: Icon, title, description }: { icon: any; title: string; description: string }) => (
   <div className="p-6 bg-white/50 backdrop-blur-sm rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 group">
@@ -45,6 +46,26 @@ const Services = () => {
           <p className="mt-4 text-lg text-gray-600">
             Soluções completas para suas necessidades tecnológicas
           </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <AspectRatio ratio={16/9}>
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
+                alt="Datacenter moderno"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </AspectRatio>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <AspectRatio ratio={16/9}>
+              <img
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80"
+                alt="Desenvolvimento de software"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </AspectRatio>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
